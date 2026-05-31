@@ -86,8 +86,3 @@ Gestionarea activitatilor, alocarea lor, modificarea statusurilor si fluxul de a
 ### Tag-uri (Tags)
 Categorisirea task-urilor pe baza unor etichete specifice.
 ![Metode Tag-uri](images/swagger-tags.png)
-
-
-## 5. Link catre prezentare
-
-*Va fi adaugat....*
