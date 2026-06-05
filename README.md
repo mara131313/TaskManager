@@ -86,3 +86,44 @@ Gestionarea activitatilor, alocarea lor, modificarea statusurilor si fluxul de a
 ### Tag-uri (Tags)
 Categorisirea task-urilor pe baza unor etichete specifice.
 ![Metode Tag-uri](images/swagger-tags.png)
+
+
+## 5. Ghid de Utilizare a Interfeței (UI)
+
+Aplicația oferă o interfață intuitivă (RoboLab Menu) adaptată dinamic în funcție de rolul utilizatorului autentificat. Trecerea de la un ecran la altul se face prin meniul lateral stâng, unde sunt afișate statusul curent și numărul de activități.
+
+### Autentificare și Înregistrare
+
+Înainte de a accesa panoul principal, utilizatorii trebuie să treacă prin sistemul de autentificare securizat:
+
+##### REGISTER 
+
+* Permite studenților noi din laborator să își creeze un cont în platformă.
+* Formularul colectează datele de bază (Nume, E-mail, Parolă). 
+* În mod implicit, toate conturile noi create din această interfață primesc automat rolul de **User** (Vizitator/Student).
+
+![Pagina de Register](images/register.png)
+
+##### LOGIN
+
+* Permite utilizatorilor existenți (Admini sau Studenți) să se conecteze introducând e-mailul și parola.
+* În urma validării credențialelor de către backend, utilizatorul primește un token JWT și este redirecționat automat către panoul principal corespunzător rolului său.
+* Conține un link rapid către pagina de înregistrare pentru conturile noi.
+
+![Pagina de Login](images/login.png)
+
+### Interfața Utilizatorului (User)
+În partea stângă jos a meniului lateral este afișat e-mailul utilizatorului curent și gradul său (`Grad: User`). 
+* Utilizatorul are acces la secțiunea **Proiecte Laborator**, unde vede cardurile cu proiectele active din cadrul RoboLab (*Imprimante 3D*, *Unitree G1*, *Aranjare Laborator*, *Adnotari*).
+* Prin **Toate Task-urile** are acces la vizionarea task-urilor tuturor membrilor.
+* Prin **Task-urile Tale** sunt afisate task-ulrile la care este assignat userul.
+* La sectiunea **Propuneri active**, apar propunerile care au fost postate de toti userii.
+* Din secțiunea **Propune Sarcină Nouă**, utilizatorul poate trimite idei sau task-uri către aprobarea administratorilor.
+
+![Interfață User](images/user.png)
+### Interfața Administratorului (Admin)
+Când autentificarea se face cu un cont de Admin, meniul lateral și acțiunile se extind:
+* Secțiunea **Propuneri active** colectează toate cererile trimise de către studenți, oferind opțiuni rapide de aprobare sau respingere.
+* Administratorul poate gestiona direct colecția de proiecte active afișate pe ecranul principal. Poate sa adauge sau sa stearga proiecte.
+
+![Interfață Administrator](images/admin.png)
